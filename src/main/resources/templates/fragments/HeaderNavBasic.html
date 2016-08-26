@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+ 
+</head>
+<body>
+	<div class="container">
+		<div th:fragment="header">
+			<nav>
+				<ul>
+					<li><a th:href="@{\preparation}">Preparation</a></li>
+					<li><a th:href="@{\analysis}">Analysis and results</a></li>
+					<li><a th:href="@{\resultanalysis}">Result analysis</a></li>
+					<li><a th:href="@{\comparison}">comparison signal</a></li>
+					<li><a th:href="@{\account}">My Account</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</body>
+</html>

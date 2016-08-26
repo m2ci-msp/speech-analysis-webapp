@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head lang="en">
+        <title>My Account</title>
+        <!--/*/ <th:block th:include="fragments/head :: head"></th:block> /*/-->
+    </head>
+    <body>
+        <!--/*/ <th:block th:include="fragments/HeaderNavBasic :: header"></th:block> /*/-->
+        <h1>Account</h1>
+        <p th:inline="text">Your user name : [[${#httpServletRequest.remoteUser}]]</p>
+        <p>Your mail : sam@sam.com</p>
+        <form>
+            <input type="text" placeholder="Change Mail"/>
+            <button>Ok</button>
+        </form>
+        <form>
+            <input type="password" placeholder="change password"/>
+            <input type="password" placeholder="confirm password"/>
+            <button>Ok</button>
+        </form>
+    </body>
+</html>

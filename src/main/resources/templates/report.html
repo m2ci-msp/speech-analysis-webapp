@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head lang="en">
+        <title>Analysis report</title>
+
+        <link rel="stylesheet" href="style.css" />
+		<!--/*/ <th:block th:include="fragments/head :: head"></th:block> /*/-->
+    </head>
+    <body>
+	<!--/*/ <th:block th:include="fragments/HeaderNavBasic :: header"></th:block> /*/-->
+	    <h1>Analysis report</h1>
+        <div id="system_description">
+            <h2>System description</h2>
+            <table width="80%" border="1">
+		        <thead>
+			        <tr>
+                        <th>Properties</th>
+				        <th>Compared system</th>
+				        <th>Reference system</th>
+			        </tr>
+		        </thead>
+		        <tbody>
+			        <tr>
+				        <td><b>Name</b></td>
+				        <td>MaryTTS</td>
+				        <td>Festival</td>
+			        </tr>
+			        <tr>
+				        <td><b>Version</b></td>
+				        <td>5.2-SNAPSHOT</td>
+				        <td>2.4</td>
+			        </tr>
+			        <tr>
+				        <td><b>Voice</b></td>
+				        <td>cmu_arctic_slt</td>
+				        <td>cmu_arctic_slt</td>
+			        </tr>
+		        </tbody>
+            </table>
+        </div>
+
+        <div id="global_analysis">
+	        <h2>Analysis</h2>
+            <table width="80%" border="1">
+		        <thead>
+			        <tr>
+                        <th>Distance</th>
+				        <th>mean</th>
+				        <th>std. dev.</th>
+                        <th>median</th>
+                        <th>min.</th>
+                        <th>max.</th>
+			        </tr>
+		        </thead>
+		        <tbody>
+			        <tr>
+				        <td>MCD</td>
+				        <td>3.8</td>
+				        <td>0.2</td>
+				        <td>3.7</td>
+				        <td>3.6</td>
+				        <td>4.0</td>
+			        </tr>
+		        </tbody>
+		        <tbody>
+			        <tr>
+				        <td>RMSE F0</td>
+				        <td>200</td>
+				        <td>20</td>
+				        <td>200</td>
+				        <td>170</td>
+				        <td>230</td>
+			        </tr>
+		        </tbody>
+            </table>
+        </div>
+
+        <div id="detailed analysis">
+	        <h2>Distance per text file</h2>
+	        <select>
+		        <option>MCD</option>
+		        <option>Rmse</option>
+		        <option>...</option>
+	        </select>
+            <p/>
+	        <table border="1px">
+		        <thead>
+			        <tr>
+				        <th colspan="3">Scores</th>
+			        </tr>
+			        <tr>
+				        <th>Id Text</th>
+				        <th>Text</th>
+				        <th>Score</th>
+			        </tr>
+		        </thead>
+		        <tbody>
+			        <tr>
+				        <td>1</td>
+				        <td>An example</td>
+				        <td>4.0</td>
+			        </tr>
+			        <tr>
+				        <td>2</td>
+				        <td>Once upon a time in the middle of the far west</td>
+				        <td>3.8</td>
+			        </tr>
+			        <tr>
+				        <td>3</td>
+				        <td>A text</td>
+				        <td>3.7</td>
+			        </tr>
+			        <tr>
+				        <td>4</td>
+				        <td>Another text</td>
+				        <td>3.6</td>
+			        </tr>
+		        </tbody>
+	        </table>
+        </div>
+    </body>
+</html>

@@ -1,2 +1,10 @@
+.gradle/
+.idea/
+build/
+speechanalyis.iml
+speechanalyis.ipr
+speechanalyis.iws
+
+src/main/resources/application.properties
 # OSX
 .DS_Store

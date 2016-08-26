@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+ 
+    <title>Analysis</title>
+        <!--/*/ <th:block th:include="fragments/head :: head"></th:block> /*/-->
+</head>
+<body>
+	<!--/*/ <th:block th:include="fragments/HeaderNavBasic :: header"></th:block> /*/-->
+    <h1>Preparation</h1>
+    <div id="content">
+        <section>
+            <h2>Texts list</h2>
+            <form>
+            <!--th:action="@{\preparation}" th:object="${txt}" method="post">-->
+                <div>
+                    <select size="5" multiple="multiple" id="leftValuesTxt">
+                        <option >"blablah"</option>
+                        <option >"popopop"</option>
+                        <option>lalalall</option>
+                    </select>
+                </div>
+                <div>
+                    <input type="button" id="btnLeftTxt" value="Select" />
+                    <input type="button" id="btnRightTxt" value="Unselect" />
+                </div>
+                <div>
+                    <select id="rightValuesTxt" size="5" multiple="multiple">
+                    </select>
+                </div>
+            </form>
+
+        </section>
+        <section>
+            <h2>System-Voice</h2>
+            <div>
+                <select id="leftValuesVoice" size="5" multiple="multiple">
+                    <option>MaryTTS - Voice1</option>
+                    <option>MaryTTS - Voice2</option>
+                    <option>MaryTTS - Voice3</option>
+                </select>
+            </div>
+            <div>
+                <input type="button" id="btnLeftVoice" value="Select" />
+                <input type="button" id="btnRightVoice" value="Unselect" />
+            </div>
+            <div>
+                <select id="rightValuesVoice" size="5" multiple="multiple">
+                </select>
+            </div>
+        </section>
+        <form th:action="@{/mail}">
+            <button id="synthesyse">Synthesise</button>
+        </form>
+    </div>
+
+    <script th:src="@{js/preparation.js}"></script>
+</body>
+</html>

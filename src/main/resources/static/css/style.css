@@ -1,0 +1,56 @@
+body {
+    background: none repeat scroll 0px 0px #DDD;
+}
+
+#header {
+    margin-top:10px;
+    margin-bottom:20px;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+}
+
+#interface_switch {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#content {
+    border-radius: 10px;
+    margin-left:auto;
+    margin-right:auto;
+    overflow:auto;
+    width: 80%;
+    border: 2px solid #CCC;
+    padding:1em;
+    background: none repeat scroll 0% 0% #EEE;
+}
+
+h1 {
+    text-align: center;
+}
+
+nav ul li{
+    display: inline;
+}
+
+section {
+    padding: 8px;
+    background-color: #f0f0f0;
+    overflow: auto;
+}
+section > div {
+    float: left;
+    padding: 15px;
+}
+
+section > div + div {
+    width: 40px;
+    text-align: center;
+}
+
+select[multiple] {
+    width: 200px;
+}

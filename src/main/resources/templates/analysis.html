@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head lang="en">
+        <title>analysis</title>
+        <!--/*/ <th:block th:include="fragments/head :: head"></th:block> /*/-->
+    </head>
+    <body>
+        <!--/*/ <th:block th:include="fragments/HeaderNavBasic :: header"></th:block> /*/-->
+        <h1>Analysis</h1>
+        <section>
+            <h2>Voice to compare</h2>
+            <select>
+                <option>System1-voice1</option>
+                <option>system1-voice2</option>
+                <option>system2-voice1</option>
+                <option>system2-voice2</option>
+            </select>
+            <select>
+                <option>System1-voice1</option>
+                <option>system1-voice2</option>
+                <option>system2-voice1</option>
+                <option>system2-voice2</option>
+            </select>
+        </section>
+
+        <section>
+            <h2>Text shared by the two voices</h2>
+            <div>
+                <select id="leftValuesTxt" size="5" multiple="multiple">
+                    <option>Sun is shining</option>
+                    <option>Weather is sweet</option>
+                    <option>Make you want to move your dancing feet </option>
+                </select>
+            </div>
+            <div>
+                <input type="button" id="btnLeftTxt" value="Select" />
+                <input type="button" id="btnRightTxt" value="Unselect" />
+            </div>
+            <div>
+                <select id="rightValuesTxt" size="5" multiple="multiple">
+                </select>
+            </div>
+        </section>
+        <form th:action="@{/mail}">
+            <button id="synthesyse">Synthesise</button>
+        </form>
+    </body>
+    <script th:src="@{js/preparation.js}"></script>
+</html>

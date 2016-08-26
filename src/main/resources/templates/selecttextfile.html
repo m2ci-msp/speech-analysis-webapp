@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+ 
+    <title>Select text file</title>
+    <!--/*/ <th:block th:include="fragments/head :: head"></th:block> /*/-->
+</head>
+<body>
+    <h2>List of existing text files</h2>
+    <select multiple="multiple">
+        <option>text 1</option>
+        <option>text 2</option>
+    </select>
+<!--	<div th:if="${not #lists.isEmpty(txts)}">
+		<h2>Texts list</h2>
+		<table border="1px">
+			<thead>
+			<tr>
+				<th>id</th>
+				<th>url</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr th:each="txt : ${txts}">
+				<td th:text="${txt.idTxt}">ID Text</td>
+				<td th:text="${txt.url}">Url</td>
+                <td><a>select</a></td>
+			</tr>
+			</tbody>
+		</table>
+	</div>-->
+</body>
+</html>

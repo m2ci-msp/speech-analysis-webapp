@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head lang="en">
+        <title>Analysis report</title>
+
+        <script type="text/javascript" src="../static/js/wavesurfer.js/src/wavesurfer.js" th:src="@{js/wavesurfer.js/src/wavesurfer.js}"></script>
+        <script type="text/javascript" src="../static/js/wavesurfer.js/src/util.js" th:src="@{js/wavesurfer.js/src/util.js}"></script>
+        <script type="text/javascript" src="../static/js/wavesurfer.js/src/webaudio.js" th:src="@{js/wavesurfer.js/src/webaudio.js}"></script>
+        <script type="text/javascript" src="../static/js/wavesurfer.js/src/mediaelement.js" th:src="@{js/wavesurfer.js/src/mediaelement.js}"></script>
+        <script type="text/javascript" src="../static/js/wavesurfer.js/src/drawer.js" th:src="@{js/wavesurfer.js/src/drawer.js}"></script>
+        <script type="text/javascript" src="../static/js/wavesurfer.js/src/drawer.canvas.js" th:src="@{js/wavesurfer.js/src/drawer.canvas.js}"></script>
+        <script type="text/javascript" src="../static/js/wavesurfer.js/plugin/wavesurfer.segmentation.js" th:src="@{s/wavesurfer.js/plugin/wavesurfer.segmentation.js}"></script>
+        <script type="text/javascript" src="../static/js/wavesurfer.js/plugin/wavesurfer.regions.js" th:src="@{js/wavesurfer.js/plugin/wavesurfer.regions.js}"></script>
+        <!--
+             <script src="js/wavesurfer.js/plugin/wavesurfer.spectrogram.js"></script>
+           -->
+        <script type="text/javascript" src="../js/main.js" th:src="@{js/main.js}"></script>
+
+        <link rel="stylesheet" href="../static/css/style.css" th:href="@{css/style.css}"/>
+        <!--/*/ <th:block th:include="fragments/head :: head"></th:block> /*/-->
+    </head>
+    <body onLoad="initialisation();">
+    <!--/*/ <th:block th:include="fragments/HeaderNavBasic :: header"></th:block> /*/-->
+	    <h1>Analysis report</h1>
+        <div id="system_description">
+            <h2>System description</h2>
+            <table width="80%">
+		        <thead>
+			        <tr>
+                        <th>Properties</th>
+				        <th>Compared system</th>
+				        <th>Reference system</th>
+			        </tr>
+		        </thead>
+		        <tbody>
+			        <tr>
+				        <td><b>Name</b></td>
+				        <td>MaryTTS</td>
+				        <td>Festival</td>
+			        </tr>
+			        <tr>
+				        <td><b>Version</b></td>
+				        <td>5.2-SNAPSHOT</td>
+				        <td>2.4</td>
+			        </tr>
+			        <tr>
+				        <td><b>Voice</b></td>
+				        <td>cmu_arctic_slt</td>
+				        <td>cmu_arctic_slt</td>
+			        </tr>
+		        </tbody>
+            </table>
+        </div>
+        <hr />
+        <div id="compared_signal">
+	        <h2>Signal compared system</h2>
+
+            <div id="audio_area_comp">
+                <div id="timeline_comp">
+                </div>
+                <div id="waveform_comp">
+                    <div class="progress progress-striped active" id="progress-bar">
+                        <div class="progress-bar progress-bar-info"></div>
+                    </div>
+                </div>
+                <div id="spectrogram_comp">
+                </div>
+                <div id="controls_ref">
+                    <button name="play" onclick="play_comp();">Replay</button>
+                    <button name="save" onclick="save_comp();">Save</button>
+                </div>
+
+            </div>
+        </div>
+        <hr />
+        <div id="reference_signal">
+	        <h2>Signal reference system</h2>
+
+            <div id="audio_area_ref">
+                <div id="timeline_ref">
+                </div>
+                <div id="waveform_ref">
+                    <div class="progress progress-striped active" id="progress-bar">
+                        <div class="progress-bar progress-bar-info"></div>
+                    </div>
+                </div>
+                <div id="spectrogram_ref">
+                </div>
+                <div id="controls_ref">
+                    <button name="play" onclick="play_ref();">Replay</button>
+                    <button name="save" onclick="save_ref();">Save</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
