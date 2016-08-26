@@ -7,3 +7,4 @@
 #spring.datasource.username=
 #spring.datasource.password=
 #server.port=8080
+spring.messages.basename=validation
