@@ -32,8 +32,7 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
 	compile 'org.webjars:jquery:3.0.0'
 	compile('com.h2database:h2')
-	//runtime('org.postgresql:postgresql:9.4.1208.jre7')
-	compile('org.seleniumhq.selenium:selenium-java:3.0.0-beta2')
+	compile('org.seleniumhq.selenium:selenium-java:2.9.0')
 	testCompile('org.springframework.boot:spring-boot-starter-test') 
 }
 
