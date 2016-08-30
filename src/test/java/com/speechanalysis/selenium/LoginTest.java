@@ -15,7 +15,7 @@ public class LoginTest {
     public void NotExistingUser(){
         WebDriver driver = new HtmlUnitDriver();
         driver.navigate().to("http://localhost:"+port);
-        WebElement element = driver.findElement(By.id("username"));
+        WebElement element = driver.findElement(By.name("username"));
         element.sendKeys("plam");
 
         driver.quit();
