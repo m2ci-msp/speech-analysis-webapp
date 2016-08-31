@@ -9,11 +9,11 @@
 <form method="post" th:action="@{/login}">
     <div th:class="${error != null ? 'has-error' : ''}">
         <span th:text="${message}"></span>
-        <input name="username" type="text" placeholder="Username" autofocus="true"/>
-        <input name="password" type="password" placeholder="Password"/>
-        <span th:text="${error}"></span>
-        <button type="submit">Log In</button>
-        <h4><a th:href="@{\registration}">Create an account</a></h4>
+        <input id="username" name="username" type="text" placeholder="Username" autofocus="true"/>
+        <input id="password" name="password" type="password" placeholder="Password"/>
+        <span id="invaliderror" th:text="${error}"></span>
+        <button id="login" type="submit">Log In</button>
+        <h4><a id="linksignin" th:href="@{/registration}">Create an account</a></h4>
     </div>
 </form>
 </body>
